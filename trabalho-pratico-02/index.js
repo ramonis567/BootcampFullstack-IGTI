@@ -1,5 +1,4 @@
 import {promises as fs} from "fs";
-import { inherits } from "util";
 
 initData();
 
@@ -12,6 +11,6 @@ async function initData(){
 
   states.forEach(state => {
     const stateCities = cities.filter(city => city.Estado === state.ID);
-    fs.writeFile(`./Estados/${state.Sigla}.json`, stateCities);
+    fs.writeFile(`./Estados/${state.Sigla}.json`, JSON.stringify(stateCities));
   });
 }

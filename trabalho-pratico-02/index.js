@@ -5,8 +5,9 @@ init();
 async function init(){
   await initData();
   await statesWithMoreandLessCities();
-}
+  await citiesWithTheLongestName();
 
+}
 
 async function initData(){
   let dataStates = await fs.readFile("./OriginalFiles/Estados.json");
@@ -52,4 +53,28 @@ async function statesWithMoreandLessCities(){
 
   console.log("--- MENOS CIDADES");
   console.log(result2)
+}
+
+async function citiesWithTheLongestName(){
+
+}
+
+async function getLongestName(uf){
+  const cities = JSON.parse(await fs.readFile(`./Estados/${uf}.json`));
+
+  let longestSize = 0;
+  let longestCity;
+
+  cities.forEach(city => {
+    if(city.Nome.length > longestSize){
+      longestSize = city.Nome.length;
+      longestCity = city;
+    }else if(city.Nome.length === longestSize){
+      if(city.Nome.toLowerCase() < longestCity.Nome.toLowerCase()){   //Compara ordem alfabetica
+        longestCity = city;
+      }
+    }
+  });
+
+  return longestCity;
 }

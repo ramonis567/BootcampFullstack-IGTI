@@ -6,4 +6,12 @@ Repositório de Exposição dos trabalhos e desafios feitos durante o Bootcamp d
 
 
 - Trabalho Prático 01 -> Seletor de Cores RGB
+HTML + CSS + Javascript Puro
+
+
 - Desafio 01 -> Pesquisa de Usuários em API
+Busca de Dados em API + Exibição Visual
+
+
+- Trabalho Prático 02 -> Trabalhando com Arquivos Json
+Manipulação de Arquivos JSON com FileSystem + Node.Js

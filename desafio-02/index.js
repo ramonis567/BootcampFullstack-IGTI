@@ -7,6 +7,6 @@ global.fileName = "grades.json";
 
 app.use(express.json());
 app.use("/grade", router);
-app.listen(3000, () => {
+app.listen(8000, () => {
   console.log("API INICIADA");
 });

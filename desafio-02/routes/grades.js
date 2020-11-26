@@ -112,13 +112,26 @@ router.post("/totalGrade", async (req, res)=>{
 
 router.get("/media/:subject/:type", async (req, res) => {
   const json = JSON.parse(await readFile(global.fileName, "utf8"));
-  const grades = json.grades.filter(grade => grade.student === req.params.student && grade.subject === req.params.subject);
+  const grades = json.grades.filter(grade => grade.subject === req.params.subject && grade.type === req.params.type);
   const total = grades.reduce((prev, curr) => {
     return prev+curr.value
   }, 0);
   
+  res.send({media: total / grades.length});
+});
 
-  res.send({total});
+router.post("/melhores", async (req, res) =>{
+  const json = JSON.parse(await readFile(global.fileName, "utf8"));
+  const params = req.body;
+  const grades = json.grades.filter(grade => grade.subject === params.subject && grade.type === params.type);
+
+  grades.sort((a,b) => {
+    if(a.value < b.value) return 1;
+    else if(a.value > b.value) return -1;
+    else return 0;
+  });
+
+  res.send(grades.slice(0, 3));
 });
 
 export default router;

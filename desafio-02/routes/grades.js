@@ -73,4 +73,52 @@ router.delete("/:id", async (req, res)=>{
   }
 });
 
+router.get("/:id", async (req, res)=>{
+  try {
+
+    let json = JSON.parse(await readFile(global.fileName, "utf8"));
+    const grade = json.grades.find(grade => grade.id == req.params.id);
+
+    if(grade){
+      res.send(grade);
+    } else {
+      res.end();
+    }
+
+  } catch (err) {
+
+    res.status(400).send({error: err.message});
+
+  }
+});
+
+router.post("/totalGrade", async (req, res)=>{
+  try {
+
+    const json = JSON.parse(await readFile(global.fileName, "utf8"));
+    const params = req.body;
+    const grades = json.grades.filter(grade => grade.student === params.student && grade.subject === params.subject);
+    const total = grades.reduce((prev, curr) => {
+      return prev+curr.value
+    }, 0);
+    res.send({total});
+    
+  } catch (err) {
+
+    res.status(400).send({error: err.message});
+    
+  }
+});
+
+router.get("/media/:subject/:type", async (req, res) => {
+  const json = JSON.parse(await readFile(global.fileName, "utf8"));
+  const grades = json.grades.filter(grade => grade.student === req.params.student && grade.subject === req.params.subject);
+  const total = grades.reduce((prev, curr) => {
+    return prev+curr.value
+  }, 0);
+  
+
+  res.send({total});
+});
+
 export default router;

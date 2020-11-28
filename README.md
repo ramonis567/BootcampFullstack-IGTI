@@ -18,4 +18,22 @@ Repositório de Exposição dos trabalhos e desafios feitos durante o Bootcamp d
 --------------------------------------------------
 ### Trabalho Prático 02 -> Trabalhando com Arquivos Json
 ##### Manipulação de Arquivos JSON com FileSystem + Node.Js
+
+
 --------------------------------------------------
+### Desafio 02 -> Desenvolvimento da API: grades-control-api 
+##### Controle de notas de aluno em curso
+
+
+--------------------------------------------------
+### Desafios Guiados 01 -> Comparação entre Javascript Puro e React
+##### Performance comparada entre javascript e react
+##### PARTE 01 : Javascript Não Performático
+##### PARTE 02 : Javascript Performático
+##### PARTE 03 : React Class Components
+##### PARTE 04 : React Hooks
+##### LINK: <a href="http://ramonmatos.epizy.com/" target="_blank">CLICK HERE</a>
+
+
+--------------------------------------------------
+

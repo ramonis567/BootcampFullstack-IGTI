@@ -38,6 +38,7 @@ Repositório de Exposição dos trabalhos e desafios feitos durante o Bootcamp d
 --------------------------------------------------
 ### Desafios Guiados 02 -> Mini Projeto em React
 ##### Filtro de busca de países com base na API: https://restcountries.eu/rest/v2/all
-
+##### LINK: <a href="http://ramonmatos.epizy.com/" target="_blank">CLICK HERE</a>
+##### LINK: <a href="https://codesandbox.io/s/keen-wozniak-ivjgt?file=/src/App.js" target="_blank">CLICK HERE</a>
 
 --------------------------------------------------

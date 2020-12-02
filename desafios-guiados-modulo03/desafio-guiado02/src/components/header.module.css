@@ -3,4 +3,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  border: 2px solid cadetblue;
+  border-radius: 20px;
+  padding: 20px;
 }

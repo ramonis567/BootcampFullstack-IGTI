@@ -43,3 +43,7 @@ Repositório de Exposição dos trabalhos e desafios feitos durante o Bootcamp d
 
 
 --------------------------------------------------
+### Trabalho Prático 03 -> Cálculo Reativo de Descontos em Salário
+##### Cálculo de Descontos de INSS e IRPF sobre salários
+##### LINK: <a href="http://ramonmatos.epizy.com/" target="_blank">CLICK HERE</a>
+##### ALT LINK: <a href="https://codesandbox.io/s/optimistic-lumiere-6ff18?file=/src/App.js" target="_blank">LINK ALTERNATIVO (Code Sandbox)</a>

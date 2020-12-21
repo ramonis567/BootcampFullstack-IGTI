@@ -1,6 +1,6 @@
 # Bootcamp Fullstack - IGTI
 
-## ---- FINALIZADO 
+### ---- FINALIZADO 
 ### Tempo do Bootcamp acabou antes que eu concluísse todos os desafios
 
 Repositório de Exposição dos trabalhos e desafios feitos durante o Bootcamp de Desenvolvimento Fullstack do IGTI.

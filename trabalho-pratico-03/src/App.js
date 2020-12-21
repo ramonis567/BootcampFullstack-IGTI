@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import InputFullSalary from "./components/inputFullSalary";
 import InputReadOnly from './components/inputReadOnly';
+import ProportionBar from './components/proportionBar';
 import { calculateSalaryFrom } from "./helpers/salary.js";
 
 export default class App extends Component {
@@ -34,12 +35,31 @@ export default class App extends Component {
         </div>
 
         <div className="row">
-          <InputReadOnly label="Base INSS" value={salaryObj.baseINSS}/>
-          <InputReadOnly label="Desconto INSS" value={salaryObj.discountINSS} percentage={salaryObj.percentINSS} />
+          <InputReadOnly 
+            label="Base INSS" 
+            value={salaryObj.baseINSS}
+          />
+          <InputReadOnly 
+            label="Desconto INSS" 
+            value={salaryObj.discountINSS} 
+            percentage={salaryObj.percentINSS}
+            color={"maroon"}
+          />
           <InputReadOnly label="Base IRPF" value={salaryObj.baseIRPF}/>
-          <InputReadOnly label="Desconto IRPF" value={salaryObj.discountIRPF} percentage={salaryObj.percentIRPF} />
-          <InputReadOnly label="Salário Líquido" value={salaryObj.netSalary} percentage={salaryObj.percentNetSalary} />
+          <InputReadOnly 
+            label="Desconto IRPF" 
+            value={salaryObj.discountIRPF} 
+            percentage={salaryObj.percentIRPF} 
+            color={"orange"}
+          />
+          <InputReadOnly 
+            label="Salário Líquido" 
+            value={salaryObj.netSalary} 
+            percentage={salaryObj.percentNetSalary} 
+            color={"forestgreen"}
+          />
         </div>
+        <ProportionBar inss={salaryObj.percentINSS} irpf={salaryObj.percentIRPF} netSalary={salaryObj.percentNetSalary}/>
       </div>
     );
   }
